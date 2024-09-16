@@ -1,0 +1,79 @@
+extends ../index.pug 
+
+block links 
+    link(rel="stylesheet" href="/css/loader.css")
+
+block contenido
+    main(class="layaut__content")
+        section(class="content__page content__contact")
+            header(class="contact__header")
+                h1(class="contact__title") Contacto
+            
+
+            div(class="contact__container")
+                section(class="contact__info")
+                    div(class="contact__data")
+                        i(class="fa-solid fa-location-dot contact__icon")
+                        h2(class="contact__subtitle") Moreno
+                    
+
+                    div(class="contact__data")
+                        i(class="fa-solid fa-phone contact__icon")
+                        h2(class="contact__subtitle") 11-64752534
+                    
+
+                    div(class="contact__data")
+                        i(class="fa-solid fa-envelope contact__icon")
+                        h2(class="contact__subtitle") gabytula08@gmail.com
+                   
+
+                    div(class="contact__data")
+                        i(class="fa-solid fa-circle-check contact__icon")
+                        h2(class="contact__subtitle") Desarrollador Front-End
+                    
+                
+
+                section(class="contact__form-box")
+                    div(class="contact__map" id="load-iframe-map")
+
+                    header(class="contact__form-header")
+                        h3(class="form-header__subtitle") Como puedo 
+                            span(class="title__color") ayudarte?
+                    
+                    if errores 
+                        each error in errores
+                            p(class="block w-full py-2 px-4 bg-red-600 text-white font-bold text-center my-2 border")= error.msg
+
+                    if enviado 
+                        div(class="w-full py-6")
+                            div(class="mx-auto text-green-400 text-center font-extrabold")= enviado
+
+                    form(class="contact__form" method="POST")
+                        div.form__container
+                            section.form__left
+                                div.form__group
+                                    input(type="text" class="form__input" name="nombreUsuario" id="nombreUsuario"  placeholder="Nombre")
+                                    label(for="nombreUsuario" class="form__label") Nombre
+                               
+
+                                div.form__group
+                                    input(type="email" class="form__input" name="email" id="email"  placeholder="Email")
+                                    label(for="email" class="form__label") Email
+                               
+
+                                div.form__group
+                                    input(type="text" class="form__input" name="asunto" id="asunto"  placeholder="Asunto")
+                                    label(for="asunto" class="form__label") Asunto
+                               
+                            
+
+                            section.form__right
+                                div.form__group.form__group--textarea
+                                    textarea(class="form__imput form__input--textarea" name="message" id="message"  placeholder="Mensaje")
+                                    label(for="message" class="form__label") Mensaje
+
+                        input(type="submit" class="form__buttom" value="Enviar Mensaje")
+
+
+block script 
+    script(src="/js/map.js" defer)

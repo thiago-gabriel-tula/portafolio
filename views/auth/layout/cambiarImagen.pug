@@ -1,0 +1,24 @@
+extends ../mostrar.pug
+
+block contenido 
+    header(class="w-full text-center py-11")
+        h1(class="uppercase font-extrabold text-2xl color")= titulo
+
+    div(class="w-auto")
+        if errores 
+            each error in errores 
+                p(class="block w-80 lg:w-1/4 text-center mx-auto bg-red-600 text-white font-bold rounded mb-2")= error.msg
+
+        form(id="imagen" method="POST" enctype="multipart/form-data" class="w-60 sm:w-96 h-auto bg-white shadow mx-auto px-4 py-4 space-y-5 ")
+            div(class="")
+                label(for="img" class="font-bold color") Agregar Imagen
+                input(type="file" name="imagenCambiar" id="img" class="block")
+
+            
+
+            input(type="submit" id="btn" class="bg-indigo-400 font-bold text-white px-2 rounded-md cursor-pointer" value="Publicar" disabled) 
+
+
+block script 
+    script(src="/js/agregarImagen.js")
+    

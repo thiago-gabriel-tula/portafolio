@@ -1,0 +1,68 @@
+/*--------------------------------PARA CHROME---------------------------------*/
+:root{
+    --color-srollbar:#D3D3D4;
+    --color-background-scroll:#eee;
+}
+
+.content__page::-webkit-scrollbar{
+    width:22px;
+    background-color:transparent ;
+}
+
+.content__page::-webkit-scrollbar-thumb{ /* el cosito que se mueve de arriba hacia abajo y viceversa*/
+    border:10px solid transparent;
+    box-shadow: none;
+    border-radius:40px;
+}
+
+.content__page:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 10px var(--color-srollbar);
+}
+
+.content__page::-webkit-scrollbar-thumb:hover{
+    border:8px solid transparent;
+    box-shadow: inset 0 0 10px var(--color-secondary);
+}
+
+.content__page::-webkit-scrollbar-track{ /*la caja como tal, de punta a punta. caja completa*/
+    background-color: transparent;
+    margin:35px 0;
+}
+
+/*-------------------------------------PARA FIREFOX------------------------------------------------*/
+
+.content__page{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-background-scroll);
+}
+
+/*--------------------------------PARA CHROME barra lateral---------------------------------*/
+:root{
+    --color-srollbar:#D3D3D4;
+    --color-background-scroll:#eee;
+}
+
+.layout__aside::-webkit-scrollbar{
+    width:22px;
+    background-color:transparent ;
+}
+
+.layout__aside::-webkit-scrollbar-thumb{ /* el cosito que se mueve de arriba hacia abajo y viceversa*/
+    border:10px solid transparent;
+    box-shadow: none;
+    border-radius:40px;
+}
+
+.layout__aside:hover::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 10px var(--color-srollbar);
+}
+
+.layout__aside::-webkit-scrollbar-thumb:hover{
+    border:8px solid transparent;
+    box-shadow: inset 0 0 10px var(--color-srollbar);
+}
+
+.layout__aside::-webkit-scrollbar-track{ /*la caja como tal, de punta a punta. caja completa*/
+    background-color: transparent;
+    margin:35px 0;
+}

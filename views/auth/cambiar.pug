@@ -1,0 +1,37 @@
+html( lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+        link(rel="stylesheet" href="/css/reset.css")
+        //- link(rel="stylesheet" href="/css/estilo.css")
+        link(rel="stylesheet" href="/css/responsive.css")
+        link(rel="stylesheet" href="/css/scroll.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet")
+        link(href="/css/app.css" rel="stylesheet")
+        link(href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet")
+        script(src="https://kit.fontawesome.com/0c888458ab.js" crossorigin="anonymous")
+        title Thiago Tula | #{pagina}
+
+    body(class="bg-slate-50")
+
+        div(class="w-full")
+
+            form(class="border mx-auto w-72 sm:w-96 mt-28 p-4 shadow bg-white rounded-md" method="POST")
+
+                div(class="w-full space-y-4 border-b-2 pb-4 flex flex-col center")
+
+                    i(class="fa-solid fa-lock centrar block mx-auto")
+                    div(class="text-center font-bold uppercase") Cambiar Contraseña
+                
+                div(class="block w-full mt-4")
+                    if errores 
+                        each error in errores 
+                            p(class="w-auto border border-red-500 block bg-red-200 text-red-500 font-bold rounded py-1 px-3 text-center mb-2")= error.msg
+
+                    label(for="password" class="block mt-4 text-gray-500 font-bold") Nuevo Password:
+                    input(type="password" placeholder="Password" name="password" id="password" class="bg-slate-100 w-full px-2")
+
+                
+                input(type="submit" class="block cursor-pointer mt-3 mx-auto fondo font-bold rounded-lg p-1")

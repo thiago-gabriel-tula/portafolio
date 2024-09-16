@@ -1,0 +1,43 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "portafolio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Build script here'",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "css": "postcss public/css/tailwind.css -o public/css/app.css --watch",
+    "db:importar": "node seed/seeder.js",
+    "netlify:deploy": "netlify deploy",
+    "netlify:deploy:prod": "netlify deploy --prod",
+    "netlify:open": "netlify open"
+  },
+  "author": "thiago tula",
+  "license": "ISC",
+  "dependencies": {
+    "@sendinblue/client": "^3.3.1",
+    "cloudinary": "^1.41.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "mysql2": "^3.10.3",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "serverless-http": "^3.2.0",
+    "sib-api-v3-sdk": "^8.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "netlify-cli": "^17.33.5",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^3.1.4",
+    "postcss": "^8.4.39",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.4"
+  }
+}

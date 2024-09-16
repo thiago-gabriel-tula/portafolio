@@ -1,0 +1,40 @@
+extends ../mostrar.pug
+
+block contenido 
+    header(class="w-full text-center py-11")
+        h1(class="uppercase font-extrabold text-2xl color")= titulo
+
+    //- pre= JSON.stringify(proyecto, undefined, 2)
+    
+    div(class="w-auto")
+        if errores 
+            each error in errores 
+                p(class="block w-80 lg:w-1/4 text-center mx-auto bg-red-600 text-white font-bold rounded mb-2")= error.msg
+
+        form(id="imagen" method="POST"  class="w-60 sm:w-80 h-auto bg-white shadow mx-auto px-4 py-4 space-y-5 overflow-x-hidden")
+            div(class="")
+                label(for="titulo" class="font-bold color text-center") Agregar Titulo
+                input(type="text" name="titulo" id="titulo" class="block h-7 w-full px-3 py-1 bg-slate-200" placeholder="Titulo" value= proyecto.title)
+
+            div()
+                label(for="urlImage" class="font-bold color text-center") Url de la Imagen
+                input(type="text" id="urlImage" name="urlImage" class="block h-7 w-full px-3 py-1 bg-slate-200" placeholder="https://imagen.png" value= proyecto.image_url) 
+
+
+            div(class="")
+                label(for="descripcion" class="font-bold color text-center") Agregar Descripcion
+                input(type="text" id="descripcion" name="descripcion" class="block h-7 w-full px-3 py-1 bg-slate-200" placeholder="Descripcion del Proyecto" value= proyecto.description)
+
+            div(class="")
+                label(for="proyecto" class="font-bold color text-center") Enlace al proyecto
+                input(type="text" id="proyecto" name="proyecto" class="block h-7 w-full py-1 px-3 bg-slate-200" placeholder="Enlace" value= proyecto.project_url)
+
+            div(class="")
+                label(for="github" class="font-bold color text-center") Enlace a GitHub
+                input(type="text" id="github" name="github" class="block w-full h-7 px-3 py-1 bg-slate-200" placeholder="GtHub" value= proyecto.github_url)
+
+            input(type="submit" id="btn" class="bg-indigo-400 font-bold text-white px-2 rounded-md cursor-pointer" value="Guardar Cambios" disabled) 
+
+
+block script 
+    script(src="/js/guardarDatos.js")

@@ -1,0 +1,164 @@
+extends ../index.pug 
+
+block contenido           
+    main(class="layaut__content")
+        section(class="content__page content__resume")
+            //- <!--este contenido cambia -->
+            header(class="resume__header")
+                h1(class="resume__title") Curriculum
+            
+            div(class="resume__container")
+                section(class="resume__left")
+                    header(class="resume__subheader")
+                        h2(class="resume__subtitle formacion") Formación
+                   
+                    div(class="resume__timelines")
+                        article(class="timelines__timeline")
+                            header(class="timeline__header")
+                                h4(class="timeline__year") 2023
+                                span(class="timeline__company") Domestik
+                            
+
+                            div(class="timeline__divider")
+
+                            div(class="timeline__description")
+                                h3(class="timeline__title") Desarrollo web
+                                p(class="timeline__text") Durante el principio de año de 2022 estudie con Domestik atraves de cursos en lenguajes y herramientas como HTML5, CSS y svg.
+                           
+                        
+                        article(class="timelines__timeline")
+                            header(class="timeline__header")
+                                h4(class="timeline__year") 2024
+                                span(class="timeline__company") Cursos Udemy
+                            
+    
+                            div(class="timeline__divider")
+    
+                            div(class="timeline__description")
+                                h3(class="timeline__title") Programación
+                                p(class="timeline__text") Para mitad de año del 2022 hasta la actualidad estudié en cursos de Udemy en lenguajes como Javascript del lado del cliente y del servidor.
+                            
+                        
+                 
+
+                section(class="resume__right")
+                    header(class="resume__subheader")
+                        h2(class="resume__subtitle habilidades") Habilidades  
+                            span(class="title__color") Front-End
+                    
+                    div(class="resume__skills")
+
+                        article(class="skills__titles")
+                            h4(class="skills__text") Javascript
+                            span(class="skills__number") 100%
+                       
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p1")
+                       
+                            
+                        article(class="skills__titles")
+                            h4(class="skills__text") Css
+                            span(class="skills__number") 90%
+                       
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p2")
+                        
+                        article(class="skills__titles")
+                            h4(class="skills__text") Tailwind.css
+                            span(class="skills__number") 95%
+                        
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p3")
+                            
+                        article(class="skills__titles")
+                            h4(class="skills__text") React
+                            span(class="skills__number") 50%
+                 
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p4")
+                        
+                            
+                      
+                    header(class="resume__subheader")
+                        h2(class="resume__subtitle codigo") Habilidades  
+                            span(class="title__color") Back-End
+                   
+                    div(class="resume__skills")
+                        article(class="skills__titles")
+                            h4(class="skills__text") Node.js
+                            span(class="skills__number") 80%
+                        
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p5")
+                        
+                            
+
+                        article(class="skills__titles")
+                            h4(class="skills__text") MySql
+                            span(class="skills__number") 100%
+                        
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p6")
+                       
+                            
+
+                        article(class="skills__titles")
+                            h4(class="skills__text") MongoDB
+                            span(class="skills__number") 100%
+                       
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p7")
+                        
+                            
+                            
+                        article(class="skills__titles")
+                            h4(class="skills__text") Express.js
+                            span(class="skills__number") 90%
+                       
+                        div(class="skills__progressbar")
+                            div(class="skills__percentage skills__percentage--p8")
+                      
+                         
+                    
+                    header.resume__subheader
+                        h2(class="resume__subtitle area") Area de Conocimientos
+                    
+                    div.resume__knowledges
+                        ul.knowledges__list
+                            li(class="knowledges__option") 
+                                i(class="fa-brands fa-git-alt")
+                            li(class="knowledges__option") 
+                                i(class="fa-brands fa-github")
+                            li(class="knowledges__option") 
+                                i(class="fa-solid fa-database")
+                            li(class="knowledges__option")
+                                i(class="fa-brands fa-node")
+                            li(class="knowledges__option")
+                                i(class="fa-brands fa-js")
+                            li(class="knowledges__option")
+                                i(class="fa-brands fa-npm")
+                            li(class="knowledges__option")
+                                i(class="fa-brands fa-react")
+                       
+                
+            
+            div.resume__certificates
+                header.resume__subheader
+                    h2(class="resume__subtitle certificados") Certificados
+                
+                section(class="certificates__container")
+                    article(class="certificates__certificate")
+                        div(class="certificate__logo")
+                            img(src="/img/certificado.jpg" class="certificate__image")
+                    
+
+                        div.certificate__content
+                            h4(class="certificate__title") Master en Javascript, sql, POO, wordpress, tailwind/css
+                            span(class="certificate__date") 12 Agosto 2023
+                   
+                    
+               
+            
+        
+    
+        

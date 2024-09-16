@@ -1,0 +1,15 @@
+extends ../index.pug
+
+block contenido
+    main(class="layaut__content")
+        section(class="content__page content__portfolio")
+            //- <!--este contenido cambia -->
+            header(class="portfolio__header")
+                h1(class="portfolio__title") Portafolio
+        
+            section(class="flex lg:flex-row flex-wrap space-y-6 justify-start lg:items-start" id="seccion")
+            div 
+                span(class="loader")
+               
+block script
+    script(src="/js/consultarProyectos.js")

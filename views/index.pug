@@ -1,0 +1,115 @@
+html( lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+        link(rel="stylesheet" href="/css/reset.css")
+        link(rel="stylesheet" href="/css/estilo.css")
+        link(rel="stylesheet" href="/css/responsive.css")
+        link(rel="stylesheet" href="/css/scroll.css")
+        block links
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet")
+        link(href="/css/app.css" rel="stylesheet")
+        link(href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet")
+        script(src="https://kit.fontawesome.com/0c888458ab.js" crossorigin="anonymous")
+        title Thiago Tula | #{pagina}
+    
+
+
+    body
+        //- <!--layaut principal-->
+        div(class="layaut")
+
+            //- <!--barra lateral (info del usuario)-->
+            aside(class="layaut__aside")
+                section(class="aside__user-info")
+
+                    //- <!--informacion general-->
+                    div(class="user-info__general")
+                        div.user-info__container-image
+                            img(src="/img/img5.jpg" class="user-info__image" alt="Foto de perfil del usuario")
+                            //- <!--------------AQUÍ ESTA EL AFTER--------------->
+                        
+                        h2(class="user-info__name") Thiago Tula
+                        h4(class="user-info__job") Desarrollador web
+                    
+
+                    //- menu de navegacion
+                    div(class="user-info__menu")
+                        ul(class="menu__list")
+                            li(class="menu__option")
+                                a(href="/" class="menu__link")
+                                    i(class=`fa-solid fa-house menu__icon ${ color == 1 ? 'color-fondo' : 'sin-color'}`  )
+                                    span(class=`menu__overlay ${color == 1 ? 'menu--active': ''}`) Home
+                                
+                            
+
+                            li(class="menu__option")
+                                a(href="/sobre-mi" class="menu__link")
+                                    i(class=`fa-solid fa-user menu__icon ${ color == 2 ? 'color-fondo' : 'sin-color'}`)
+                                    span(class=`menu__overlay ${color == 2 ? 'menu--active': ''}`) Sobre mí
+                                
+
+                            li(class="menu__option")
+                                a(href="/curriculum" class="menu__link")
+                                    i(class=`fa-solid fa-graduation-cap menu__icon ${ color == 3 ? 'color-fondo' : 'sin-color'}`)
+                                    span(class=`menu__overlay ${color == 3 ? 'menu--active': ''}`) Curriculum
+                               
+
+                            li(class="menu__option")
+                                a(href="/portafolio" class="menu__link")
+                                    i(class=`fa-solid fa-briefcase menu__icon ${ color == 4 ? 'color-fondo' : 'sin-color'}`)
+                                    span(class=`menu__overlay ${color == 4 ? 'menu--active': ''}`) Portafolio
+                                
+
+
+                            li(class="menu__option")
+                                a(href="/contacto" class="menu__link")
+                                    i(class=`fa-solid fa-envelope menu__icon ${ color == 5 ? 'color-fondo' : 'sin-color'}`)
+                                    span(class= `menu__overlay ${color == 5 ? 'menu--active': ''}`) Contacto
+                           
+                       
+                    
+
+                    //- links de las redes sociales
+                    div(class="user-info__links")
+                        ul(class="links__social")
+                            li(class="social__option py-3")
+                                a(href="https://instagram.com/thiago.tula_" target="_blank" class="social__link")
+                                    i(class="fa-brands fa-instagram social__icon")
+                            
+                            li(class="social__option py-3")
+                                a(href="https://www.linkedin.com/in/thiago-tula-62a44a269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social__link")
+                                    i(class="fa-brands fa-linkedin social__icon")
+                              
+                           
+                            li(class="social__option py-3")
+                                a(href="https://github.com/thiago-gabriel-tula" target="_blank" class="social__link")
+                                    i(class="fa-brands fa-github")
+                               
+                        
+                    
+
+                    div(class="user-info__buttons")
+                        a(href="/assets/cv.pdf" class="user-info__btn" download="assets/cv.pdf") Descargar CV
+                    
+
+                    footer(class="user-info__footer") &copy; 2024 Thiago Gabriel Tula
+                
+            
+
+            //-  menu hamburguesa 
+            div(class="layout__menu-toggle py-4")
+                i(class="menu-toggle__icon fa-solid fa-bars")
+
+
+            //- <!-- contenido principal -->
+            block contenido
+
+        
+
+        script(src="/js/foto.js")
+        script(src="/js/ocultarIconos.js")
+        block script
+    
